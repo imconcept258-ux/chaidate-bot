@@ -5,7 +5,4 @@ services:
     plan: free
     buildCommand: "pip install -r requirements.txt"
     startCommand: "python chaidate_bot.py"
-    envVars:
-      - key: BOT_TOKEN
-        sync: false
-runtime: python-3.11.4
+    runtime: python-3.11.4
