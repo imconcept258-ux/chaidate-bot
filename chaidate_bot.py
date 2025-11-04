@@ -94,13 +94,15 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
 
 def main():
-   app = Application.builder().token(BOT_TOKEN).build()
+    app = Application.builder().token(BOT_TOKEN).build()
 
-# Register handlers
-app.add_handler(CommandHandler("start", start))
-app.add_handler(MessageHandler(filters.TEXT, handle_message))
-app.add_handler(CallbackQueryHandler(button))
+    # Register handlers
+    app.add_handler(CommandHandler("start", start))
+    app.add_handler(MessageHandler(filters.TEXT, handle_message))
+    app.add_handler(CallbackQueryHandler(button))
 
-print("Bot is running...")
-app.run_polling()
+    print("Bot is running...")
+    app.run_polling()
+
+
 main()
